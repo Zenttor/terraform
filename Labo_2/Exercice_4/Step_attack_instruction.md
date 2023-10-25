@@ -1,5 +1,6 @@
 # Intrusion via SSH
 
-The attack objectiv is to connect to a user on the target IP with SSH
+The aim of the attack is to use the metasploit tool to perform an ssh bruteforce in order to connect to the machine.
 
-To attack the target with this exploit, you have to start a SSH connection with an external IP to the target on any user 
+Since we are trying to carry out this attack using a public ip, Sentinel can detect it. 
+
