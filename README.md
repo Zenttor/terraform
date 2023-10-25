@@ -1,10 +1,9 @@
 # Description architecture
-This project welcomes contributions and suggestions.
 
-- Nous avons mis en place un groupe de ressource dans la région EUW
-- Un réseau virtuel
-- Une adresse IP publique sur la VM
-- Un network security group avec une clé SSH
-- Une interface réseau lien le tout
-- Un disque de stockage ainsi qu'un compte de stockage tout deux utile pour le SIEM
-- Tout ceci basé sur une machine virtuel avec une interface SSH ouverte
+- We have set up a resource group in the EUW region
+- A virtual network
+- A public IP address on the VM
+- A network security group with an SSH key
+- A network interface linking everything together
+- A storage disk and a storage account, both useful for SIEM.
+- All this based on a virtual machine with an open SSH interface
