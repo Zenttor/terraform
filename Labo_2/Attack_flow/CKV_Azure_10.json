@@ -1,0 +1,230 @@
+{
+  "type": "bundle",
+  "id": "bundle--e21fb160-6121-4bf1-bab6-6407382c3963",
+  "spec_version": "2.1",
+  "created": "2023-10-25T06:54:48.494Z",
+  "modified": "2023-10-25T06:54:48.494Z",
+  "objects": [
+    {
+      "type": "extension-definition",
+      "id": "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "name": "Attack Flow",
+      "description": "Extends STIX 2.1 with features to create Attack Flows.",
+      "created_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "schema": "https://center-for-threat-informed-defense.github.io/attack-flow/stix/attack-flow-schema-2.0.0.json",
+      "version": "2.0.0",
+      "extension_types": [
+        "new-sdo"
+      ],
+      "external_references": [
+        {
+          "source_name": "Documentation",
+          "description": "Documentation for Attack Flow",
+          "url": "https://center-for-threat-informed-defense.github.io/attack-flow"
+        },
+        {
+          "source_name": "GitHub",
+          "description": "Source code repository for Attack Flow",
+          "url": "https://github.com/center-for-threat-informed-defense/attack-flow"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "created_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "name": "MITRE Engenuity Center for Threat-Informed Defense",
+      "identity_class": "organization"
+    },
+    {
+      "type": "attack-flow",
+      "id": "attack-flow--2b5c7801-4ba0-4da6-bb0f-009c8f4f55db",
+      "spec_version": "2.1",
+      "created": "2023-10-18T14:23:46.358Z",
+      "modified": "2023-10-25T06:54:48.495Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "created_by_ref": "identity--72f051d5-9df4-4205-b9fc-be386fd5bc6f",
+      "start_refs": [
+        "attack-action--4b290385-3be3-45ff-ab16-91c2f0d72c53"
+      ],
+      "name": "CKV_Azure_10",
+      "scope": "threat-actor"
+    },
+    {
+      "type": "identity",
+      "id": "identity--72f051d5-9df4-4205-b9fc-be386fd5bc6f",
+      "spec_version": "2.1",
+      "created": "2023-10-25T06:54:48.494Z",
+      "modified": "2023-10-25T06:54:48.494Z",
+      "name": "Actariss",
+      "identity_class": "class"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--c22533cc-7029-436b-8d2e-56b2bb3740ec",
+      "spec_version": "2.1",
+      "created": "2023-10-25T06:54:48.495Z",
+      "modified": "2023-10-25T06:54:48.495Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Tool",
+      "tactic_id": "TA0042",
+      "tactic_ref": "x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400",
+      "technique_id": "T1588.002",
+      "technique_ref": "attack-pattern--a2fdce72-04b2-409a-ac10-cc1695f4fce0",
+      "description": "The attacker can use a tool such as metasploit to carry out a brute force attack or use a recent exploit on the exposed machine's SSH service.",
+      "effect_refs": [
+        "attack-action--01bae19e-559f-4af4-9aba-838d778bd4f8"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--4b290385-3be3-45ff-ab16-91c2f0d72c53",
+      "spec_version": "2.1",
+      "created": "2023-10-25T06:54:48.495Z",
+      "modified": "2023-10-25T06:54:48.495Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Scanning IP Blocks",
+      "tactic_id": "TA0007",
+      "tactic_ref": "x-mitre-tactic--c17c5845-175e-4421-9713-829d0573dbc9",
+      "technique_id": "T1595.001",
+      "technique_ref": "attack-pattern--db8f5003-3b20-48f0-9b76-123e44208120",
+      "description": "hackers can use nmap (or similar) to scan a certain range of ip's belonging to microsoft azure to find out whether the SSH service is running on the machines corresponding to that ip.",
+      "effect_refs": [
+        "attack-operator--131e9f83-f8bd-46b9-aea4-aef5b08efedb"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--131e9f83-f8bd-46b9-aea4-aef5b08efedb",
+      "spec_version": "2.1",
+      "created": "2023-10-25T06:54:48.495Z",
+      "modified": "2023-10-25T06:54:48.495Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "OR",
+      "effect_refs": [
+        "attack-action--c22533cc-7029-436b-8d2e-56b2bb3740ec",
+        "attack-action--faadb46c-fb6c-4408-9295-e665ef8b77bd"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--faadb46c-fb6c-4408-9295-e665ef8b77bd",
+      "spec_version": "2.1",
+      "created": "2023-10-25T06:54:48.495Z",
+      "modified": "2023-10-25T06:54:48.495Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Botnet",
+      "tactic_id": "TA0042",
+      "tactic_ref": "x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400",
+      "technique_id": "T1584.005",
+      "technique_ref": "attack-pattern--810d8072-afb6-4a56-9ee7-86379ac4a6f3",
+      "description": "It is possible to use a botnet to perform bruteforce ssh, which allows you to discover the password much more quickly.",
+      "effect_refs": [
+        "attack-action--01bae19e-559f-4af4-9aba-838d778bd4f8"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--01bae19e-559f-4af4-9aba-838d778bd4f8",
+      "spec_version": "2.1",
+      "created": "2023-10-25T06:54:48.495Z",
+      "modified": "2023-10-25T06:54:48.495Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "External Remote Services",
+      "tactic_id": "TA0001",
+      "tactic_ref": "x-mitre-tactic--ffd5bcee-6e16-4dd2-8eca-7b3beedf33ca",
+      "technique_id": "T1133",
+      "technique_ref": "attack-pattern--10d51417-ee35-4589-b1ff-b6df1c334e8d",
+      "description": "Once the hacker accesses an account on the machine, the attacker has access to the network.",
+      "effect_refs": [
+        "attack-operator--50d9072d-da4b-4531-b424-06d6a0d42386"
+      ]
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--50d9072d-da4b-4531-b424-06d6a0d42386",
+      "spec_version": "2.1",
+      "created": "2023-10-25T06:54:48.495Z",
+      "modified": "2023-10-25T06:54:48.495Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "OR",
+      "effect_refs": [
+        "attack-action--934161d9-5bb6-4e8c-8966-a9c6c758c197",
+        "attack-action--f3f5896b-2ae0-4f0a-887e-75a3583939e8"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--934161d9-5bb6-4e8c-8966-a9c6c758c197",
+      "spec_version": "2.1",
+      "created": "2023-10-25T06:54:48.495Z",
+      "modified": "2023-10-25T06:54:48.495Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Cloud Administration Command",
+      "tactic_id": "TA0002",
+      "tactic_ref": "x-mitre-tactic--4ca45d45-df4d-4613-8980-bac22d278fa5",
+      "technique_id": "T1651",
+      "technique_ref": "attack-pattern--d94b3ae9-8059-4989-8e9f-ea0f601f80a7",
+      "description": "The attacker could try to use cloud administration commands to execute scripts enabling him to elevate privileges.",
+      "effect_refs": [
+        "attack-action--f3f5896b-2ae0-4f0a-887e-75a3583939e8"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--f3f5896b-2ae0-4f0a-887e-75a3583939e8",
+      "spec_version": "2.1",
+      "created": "2023-10-25T06:54:48.495Z",
+      "modified": "2023-10-25T06:54:48.495Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Additional Cloud Credentials",
+      "tactic_id": "TA0003",
+      "tactic_ref": "x-mitre-tactic--5bc1d813-693e-4823-9961-abf9af4b0e92",
+      "technique_id": "T1098.001",
+      "technique_ref": "attack-pattern--8a2f40cf-8325-47f9-96e4-b1ca4c7389bd",
+      "description": "There are several ways to add credentials, including via the Azure portal, the Azure command-line interface and Azure or Azure PowerShell modules. Adversaries can add credentials they control to maintain permanent access to victims' accounts and instances in the environment."
+    }
+  ]
+}
