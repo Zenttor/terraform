@@ -1,4 +1,4 @@
-# Description architecture
+# Architectural description
 
 - We have set up a resource group in the EUW region
 - A virtual network
